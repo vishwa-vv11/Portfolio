@@ -3,7 +3,7 @@ import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 export const metadata: Metadata = {
-  title: "Vishwa R - AI Engineer",
+  title: "Vishwa's Portfolio",
   description: "Portfolio of Vishwa R — AI Engineer focused on Machine Learning, Generative AI, RAG and Agentic AI.",
   icons: {
     icon: [
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
     shortcut: "/favicon.ico",
   },
-  openGraph: { title: "Vishwa R - AI Engineer", description: "Building practical AI systems for real-world problems.", type: "website" },
+  openGraph: { title: "Vishwa's Portfolio", description: "Building practical AI systems for real-world problems.", type: "website" },
 };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="en"><body><Navbar/><main>{children}</main><Footer/></body></html>;

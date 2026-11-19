@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <defs>
-    <linearGradient id="vrGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="sparkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#2563eb"/>
       <stop offset="50%" stop-color="#0284c7"/>
       <stop offset="100%" stop-color="#06b6d4"/>
     </linearGradient>
-    <linearGradient id="sparkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#38bdf8"/>
       <stop offset="100%" stop-color="#06b6d4"/>
     </linearGradient>
@@ -17,10 +17,11 @@
   <!-- Squircle Base -->
   <rect x="32" y="32" width="448" height="448" rx="112" fill="#ffffff" stroke="#e2e8f0" stroke-width="8" filter="url(#shadow)"/>
 
-  <!-- VR Text Monogram -->
-  <text x="256" y="360" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="240" font-weight="800" fill="url(#vrGrad)" text-anchor="middle" letter-spacing="-6">VR</text>
+  <!-- AI Sparkle Star (Main) -->
+  <path d="M 256 95 Q 256 256 417 256 Q 256 256 256 417 Q 256 256 95 256 Q 256 256 256 95 Z" fill="url(#sparkGrad)"/>
+  <circle cx="256" cy="256" r="14" fill="#ffffff"/>
 
-  <!-- AI Sparkle Star (top right) -->
-  <path d="M 390 120 Q 390 148 362 148 Q 390 148 390 176 Q 390 148 418 148 Q 390 148 390 120 Z" fill="url(#sparkGrad)"/>
-  <circle cx="390" cy="148" r="5" fill="#ffffff"/>
+  <!-- AI Mini Sparkle (Top-Right) -->
+  <path d="M 375 105 Q 375 142 412 142 Q 375 142 375 179 Q 375 142 338 142 Q 375 142 375 105 Z" fill="url(#accentGrad)"/>
+  <circle cx="375" cy="142" r="5" fill="#ffffff"/>
 </svg>
