@@ -13,7 +13,15 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 border-b border-white/[.06] bg-[#090b10]/85 backdrop-blur-xl">
-      <div className="container-shell flex h-[72px] items-center justify-between">
+      <div className="container-shell flex h-[72px] items-center justify-between gap-4">
+        <Link href="/" className="inline-flex items-center gap-3 transition hover:opacity-90">
+          <img src="/favicon.svg" alt="VR Logo" className="h-[34px] w-[34px] rounded-lg shadow-md" />
+          <span className="flex items-center gap-2 text-[0.95rem] font-bold text-[#edf2fb]">
+            <span>Vishwa R</span>
+            <span className="text-[#56657b] font-normal hidden sm:inline">-</span>
+            <span className="text-[#9aa8bd] text-sm font-medium hidden sm:inline">AI Engineer</span>
+          </span>
+        </Link>
         <nav className="hidden items-center gap-7 lg:flex">
           {links.map(([href, label]) => (
             <Link key={href} href={href} className={`text-[.94rem] font-medium transition-colors ${pathname === href ? "text-white" : "text-slate-400 hover:text-white"}`}>{label}</Link>
