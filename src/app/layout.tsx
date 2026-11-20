@@ -4,7 +4,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 export const metadata: Metadata = {
   title: "Vishwa's Portfolio",
-  description: "Portfolio of Vishwa R — AI Engineer focused on Machine Learning, Generative AI, RAG and Agentic AI.",
+  description: "Portfolio of MY — AI Engineer focused on Machine Learning, Generative AI, RAG and Agentic AI.",
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },

@@ -1,54 +1,121 @@
-# Vishwa — AI Engineer Portfolio
+# MY — AI Engineer Portfolio
 
-A responsive multi-page personal portfolio built with Next.js App Router, TypeScript, Tailwind CSS and Framer Motion.
+A responsive personal portfolio showcasing my work across artificial intelligence, machine learning, generative AI, retrieval-augmented generation, agentic systems, and computer vision.
 
-## Requirements
-- Node.js 20.9+ (Node 22 LTS recommended)
+The project combines a Next.js application with a standalone template implementation. It includes a project gallery, professional experience, education, technical skills, certificates, and contact information.
+
+## Highlights
+
+- Responsive desktop and mobile layouts
+- Featured AI and engineering projects
+- Experience and education sections
+- Grouped technical skills
+- Certificate and badge gallery with original file links
+- Framer Motion transitions and scroll reveals
+- Search metadata and favicon assets
+
+## Featured Projects
+
+| Project | Focus | Repository |
+|---|---|---|
+| FactoryCopilot | Industrial AI and agentic workflows | [View repository](https://github.com/vishwa-vv11/FactoryCopilot) |
+| ATLAS-NLP Workbench | NLP concepts and language representations | [View repository](https://github.com/vishwa-vv11/NLP-Atlas) |
+| SwachhVision | Computer vision and civic technology | [View repository](https://github.com/vishwa-vv11/SwachhVision) |
+
+## Technology Stack
+
+- Next.js 15
+- React 19
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide React
+
+## Portfolio Sections
+
+| Route | Description |
+|---|---|
+| `/` | Hero introduction and engineering focus |
+| `/about` | Personal summary and engineering approach |
+| `/projects` | Applied AI projects and repository links |
+| `/experience` | Professional experience and education |
+| `/skills` | Technical skill groups |
+| `/certificates` | Credential previews and original documents |
+| `/contact` | Email, GitHub, and LinkedIn links |
+
+## Getting Started
+
+### Requirements
+
+- Node.js 20.9 or later
 - npm
 - Git
 
-## Run locally
+### Installation
+
 ```bash
 npm install
+```
+
+### Local Development
+
+```bash
 npm run dev
 ```
-Open http://localhost:3000.
 
-## Production build
+Open `http://localhost:3000`.
+
+### Production Build
+
 ```bash
 npm run build
 npm start
 ```
 
-## Deploy to Vercel
-1. Create a GitHub repository named `vishwa-ai-portfolio`.
-2. Push this project:
-   ```bash
-   git init
-   git add .
-   git commit -m "Build Vishwa AI Engineer portfolio"
-   git branch -M main
-   git remote add origin https://github.com/vishwa-vv11/vishwa-ai-portfolio.git
-   git push -u origin main
-   ```
-3. Sign in at https://vercel.com with GitHub.
-4. Select **Add New → Project**, import `vishwa-ai-portfolio`.
-5. Keep the detected Next.js settings and click **Deploy**.
-6. Future pushes to `main` automatically trigger production deployments.
+## Project Structure
 
-## Personalise before publishing
-- Contact email: `vishwarathinavel3126@gmail.com`.
-- Verify your LinkedIn URL and repository URLs.
-- Add your latest resume as `public/resume.pdf` to activate the Resume links.
-- Review the project descriptions and only retain technologies/features you can confidently explain in an interview.
-- Optional: add project screenshots to `public/projects/` and update the `image` fields in `src/lib/data.ts`.
+```text
+src/
+├── app/
+│   ├── about/
+│   ├── certificates/
+│   ├── contact/
+│   ├── experience/
+│   ├── projects/
+│   ├── skills/
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+└── lib/
+    └── data.ts
 
-## Pages
-- `/` Home
-- `/about` About
-- `/projects` Projects
-- `/experience` Experience
-- `/skills` Skills
-- `/contact` Contact
+public/
+├── certificates/
+├── favicon assets
+└── portfolio.html
+```
 
-This is a static portfolio front end. It does not expose private APIs or require environment variables.
+Profile details, projects, experience, education, skills, and credentials are maintained in `src/lib/data.ts`.
+
+## Deployment
+
+The project is ready for deployment on Vercel:
+
+1. Push the repository to GitHub.
+2. Import the repository in Vercel.
+3. Keep the detected Next.js framework settings.
+4. Deploy the project.
+5. Assign or configure a stable Vercel domain in project settings.
+
+No environment variables or private API keys are required.
+
+## Contact
+
+- Email: [vishwarathinavel3126@gmail.com](mailto:vishwarathinavel3126@gmail.com)
+- LinkedIn: [linkedin.com/in/vishvv111](https://www.linkedin.com/in/vishvv111/)
+- GitHub: [github.com/vishwa-vv11](https://github.com/vishwa-vv11)
+
+## License
+
+This is a personal portfolio project. Certificate assets remain the property of their respective issuers and are included for portfolio display.
