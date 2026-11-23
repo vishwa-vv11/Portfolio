@@ -1,7 +1,11 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     extend: {
       colors: {
@@ -23,17 +27,14 @@ const config: Config = {
           2: "var(--accent-2)",
           alt: "var(--accent-alt)",
         },
-      },
-      fontFamily: {
-        sans: ["Plus Jakarta Sans", "Arial", "sans-serif"],
-        mono: ["JetBrains Mono", "monospace"],
+        "on-accent": "var(--on-accent)",
       },
       boxShadow: {
-        glow: "0 0 50px var(--glow)",
+        glow: "0 0 80px var(--glow)",
+        card: "0 4px 20px var(--shadow)",
       },
     },
   },
   plugins: [],
 };
-
 export default config;

@@ -21,7 +21,7 @@ export function Button({
 
   const variantClasses = {
     primary:
-      "bg-gradient-to-r from-accent to-accent-2 text-bg font-bold hover:-translate-y-0.5 hover:brightness-110",
+      "bg-gradient-to-r from-accent to-accent-2 text-on-accent font-bold hover:-translate-y-0.5 hover:brightness-110",
     secondary:
       "border border-border bg-transparent text-text hover:-translate-y-0.5 hover:border-accent hover:bg-surface-2",
     ghost:
