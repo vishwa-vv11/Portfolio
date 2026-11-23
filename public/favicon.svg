@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <!-- Warm Charcoal Background Squircle -->
-  <rect x="24" y="24" width="464" height="464" rx="110" fill="#151413"/>
+  <!-- Moss Deep Green Squircle -->
+  <rect x="24" y="24" width="464" height="464" rx="110" fill="#1A201C"/>
 
-  <!-- High-contrast Warm Cream Arms forming clear V -->
-  <line x1="110" y1="130" x2="256" y2="385" stroke="#FAF5EE" stroke-width="42" stroke-linecap="round"/>
-  <line x1="402" y1="130" x2="256" y2="385" stroke="#FAF5EE" stroke-width="42" stroke-linecap="round"/>
+  <!-- Crisp Light Arms forming clear V -->
+  <line x1="110" y1="130" x2="256" y2="385" stroke="#EAEDE6" stroke-width="42" stroke-linecap="round"/>
+  <line x1="402" y1="130" x2="256" y2="385" stroke="#EAEDE6" stroke-width="42" stroke-linecap="round"/>
 
-  <!-- Coral Neural Nodes -->
-  <circle cx="110" cy="130" r="42" fill="#E8836B"/>
-  <circle cx="402" cy="130" r="42" fill="#E8836B"/>
-  <circle cx="256" cy="385" r="42" fill="#E8836B"/>
+  <!-- Moss Warm Cream Accent Nodes -->
+  <circle cx="110" cy="130" r="42" fill="#C8B07A"/>
+  <circle cx="402" cy="130" r="42" fill="#C8B07A"/>
+  <circle cx="256" cy="385" r="42" fill="#C8B07A"/>
 </svg>
