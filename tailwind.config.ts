@@ -27,11 +27,8 @@ const config: Config = {
           2: "var(--accent-2)",
           alt: "var(--accent-alt)",
         },
+        "chip-text": "var(--chip-text)",
         "on-accent": "var(--on-accent)",
-      },
-      boxShadow: {
-        glow: "0 0 80px var(--glow)",
-        card: "0 4px 20px var(--shadow)",
       },
     },
   },
