@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <!-- Warm Dark Background Squircle -->
-  <rect x="24" y="24" width="464" height="464" rx="110" fill="#0C0A09"/>
+  <!-- Warm Charcoal Background Squircle -->
+  <rect x="24" y="24" width="464" height="464" rx="110" fill="#151413"/>
 
   <!-- High-contrast Warm Cream Arms forming clear V -->
   <line x1="110" y1="130" x2="256" y2="385" stroke="#FAF5EE" stroke-width="42" stroke-linecap="round"/>
