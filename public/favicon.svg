@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <!-- Deep Warm Espresso Squircle -->
-  <rect x="24" y="24" width="464" height="464" rx="110" fill="#0e0c0b"/>
+  <!-- Dark Background Squircle -->
+  <rect x="24" y="24" width="464" height="464" rx="110" fill="#0B0B0D"/>
 
-  <!-- Warm Cream Arms forming clear V -->
-  <line x1="110" y1="130" x2="256" y2="385" stroke="#f6eee3" stroke-width="42" stroke-linecap="round"/>
-  <line x1="402" y1="130" x2="256" y2="385" stroke="#f6eee3" stroke-width="42" stroke-linecap="round"/>
+  <!-- High-contrast Cream Arms forming clear V -->
+  <line x1="110" y1="130" x2="256" y2="385" stroke="#FAF7F2" stroke-width="42" stroke-linecap="round"/>
+  <line x1="402" y1="130" x2="256" y2="385" stroke="#FAF7F2" stroke-width="42" stroke-linecap="round"/>
 
-  <!-- Radiant Terracotta Neural Nodes -->
-  <circle cx="110" cy="130" r="42" fill="#e07a5f"/>
-  <circle cx="402" cy="130" r="42" fill="#e07a5f"/>
-  <circle cx="256" cy="385" r="42" fill="#e07a5f"/>
+  <!-- Coral Neural Nodes -->
+  <circle cx="110" cy="130" r="42" fill="#E8836B"/>
+  <circle cx="402" cy="130" r="42" fill="#E8836B"/>
+  <circle cx="256" cy="385" r="42" fill="#E8836B"/>
 </svg>
