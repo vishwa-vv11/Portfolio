@@ -5,22 +5,22 @@
 :root { color-scheme: dark; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; background: #070d0a; color: #edf5f0; font-family: Arial, Helvetica, sans-serif; }
-::selection { background: rgba(16, 185, 129, .35); color: white; }
+body { margin: 0; background: #0e0c0b; color: #fbf6ee; font-family: "Plus Jakarta Sans", Arial, sans-serif; }
+::selection { background: rgba(224, 122, 95, .35); color: white; }
 a { color: inherit; text-decoration: none; }
 button, a { -webkit-tap-highlight-color: transparent; }
 .container-shell { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
-.muted { color: #95a89d; }
-.eyebrow { color: #8fae97; font-size: .74rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
-.heading { font-size: clamp(2.1rem, 5vw, 3.65rem); line-height: 1.08; letter-spacing: -.055em; font-weight: 750; }
-.gradient-text { background: linear-gradient(110deg, #f2f6ff 10%, #34d399 72%, #8fae97); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.panel { border: 1px solid rgba(132, 169, 140, .16); background: linear-gradient(145deg, rgba(18,28,22,.96), rgba(10,16,12,.96)); border-radius: 18px; }
-.grid-bg { background-image: linear-gradient(rgba(132, 169, 140, .035) 1px, transparent 1px), linear-gradient(90deg, rgba(132, 169, 140, .035) 1px, transparent 1px); background-size: 42px 42px; mask-image: linear-gradient(to bottom, black, transparent 90%); }
-.button-primary { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border-radius: 999px; padding: 12px 18px; background: #a7f3d0; color: #042f22; font-size: .88rem; font-weight: 700; transition: transform .2s, background .2s; }
-.button-primary:hover { transform: translateY(-2px); background: #d1fae5; }
-.button-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 1px solid rgba(132, 169, 140, .24); border-radius: 999px; padding: 12px 18px; color: #dbebe2; font-size: .88rem; transition: border .2s, background .2s; }
-.button-secondary:hover { border-color: #34d399; background: rgba(16, 185, 129, .08); }
-.tag { display: inline-flex; align-items: center; border: 1px solid rgba(132, 169, 140, .2); background: rgba(132, 169, 140, .06); color: #c0d8c8; border-radius: 999px; padding: 6px 10px; font-size: .72rem; }
+.muted { color: #a6988d; }
+.eyebrow { color: #e07a5f; font-size: .74rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.heading { font-size: clamp(2.1rem, 5vw, 3.65rem); line-height: 1.08; letter-spacing: -.035em; font-weight: 800; }
+.gradient-text { background: linear-gradient(110deg, #fffaf3 10%, #e07a5f 72%, #f4977a); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.panel { border: 1px solid rgba(224, 122, 95, .16); background: linear-gradient(145deg, rgba(26,22,20,.96), rgba(16,13,12,.96)); border-radius: 18px; }
+.grid-bg { background-image: linear-gradient(rgba(224, 122, 95, .035) 1px, transparent 1px), linear-gradient(90deg, rgba(224, 122, 95, .035) 1px, transparent 1px); background-size: 42px 42px; mask-image: linear-gradient(to bottom, black, transparent 90%); }
+.button-primary { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border-radius: 999px; padding: 12px 18px; background: #e07a5f; color: #14100e; font-size: .88rem; font-weight: 700; transition: transform .2s, background .2s; }
+.button-primary:hover { transform: translateY(-2px); background: #f4977a; }
+.button-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 1px solid rgba(224, 122, 95, .25); border-radius: 999px; padding: 12px 18px; color: #f6eee3; font-size: .88rem; transition: border .2s, background .2s; }
+.button-secondary:hover { border-color: #f4977a; background: rgba(224, 122, 95, .1); }
+.tag { display: inline-flex; align-items: center; border: 1px solid rgba(224, 122, 95, .2); background: rgba(224, 122, 95, .08); color: #f6eee3; border-radius: 999px; padding: 6px 10px; font-size: .72rem; }
 .experience-track { scrollbar-width: none; overscroll-behavior-x: contain; }
 .experience-track::-webkit-scrollbar { display: none; }
 .section-space { padding-block: 88px; }
