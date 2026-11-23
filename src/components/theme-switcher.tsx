@@ -36,23 +36,31 @@ export function ThemeSwitcher() {
     } else {
       document.documentElement.setAttribute("data-theme", theme);
     }
-    localStorage.setItem("portfolio-theme", theme);
+    try {
+      localStorage.setItem("portfolio-theme", theme);
+    } catch (e) {}
 
     // Update meta theme-color
-    const tConfig = themes.find((t) => t.id === theme);
-    const meta = document.querySelector('meta[name="theme-color"]');
-    if (meta && tConfig) {
-      meta.setAttribute("content", tConfig.metaColor);
-    }
+    try {
+      const tConfig = themes.find((t) => t.id === theme);
+      const meta = document.querySelector('meta[name="theme-color"]');
+      if (meta && tConfig) {
+        meta.setAttribute("content", tConfig.metaColor);
+      }
+    } catch (e) {}
 
     // Update URL query parameter without page reload
-    const url = new URL(window.location.href);
-    if (theme === "default") {
-      url.searchParams.delete("theme");
-    } else {
-      url.searchParams.set("theme", theme);
-    }
-    window.history.replaceState(null, "", url.toString());
+    try {
+      if (window.location.protocol.startsWith("http")) {
+        const url = new URL(window.location.href);
+        if (theme === "default") {
+          url.searchParams.delete("theme");
+        } else {
+          url.searchParams.set("theme", theme);
+        }
+        window.history.replaceState(null, "", url.toString());
+      }
+    } catch (e) {}
   };
 
   return (

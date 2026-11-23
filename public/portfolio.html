@@ -572,25 +572,116 @@
     });
   </script>
   <!-- Theme Switcher Review Tool -->
+    <!-- Theme Switcher Review Tool -->
   <aside class="theme-switcher-review" data-review-ui aria-label="Theme selector">
     <div class="theme-switcher-inner">
-      <button type="button" class="theme-btn" data-set-theme="default" aria-label="Warm Charcoal theme">
+      <button type="button" class="theme-btn" data-set-theme="default" onclick="window.__setPortfolioTheme('default')" aria-label="Warm Charcoal theme">
         <span class="theme-swatch" style="background: #151413; border: 2px solid #E8836B;"></span>
         <span class="theme-name">Warm</span>
       </button>
-      <button type="button" class="theme-btn" data-set-theme="mint" aria-label="Neo-Mint light theme">
+      <button type="button" class="theme-btn" data-set-theme="mint" onclick="window.__setPortfolioTheme('mint')" aria-label="Neo-Mint light theme">
         <span class="theme-swatch" style="background: #F6F1E6; border: 2px solid #1F5D3A;"></span>
         <span class="theme-name">Mint</span>
       </button>
-      <button type="button" class="theme-btn" data-set-theme="ocean" aria-label="Deep Ocean dark theme">
+      <button type="button" class="theme-btn" data-set-theme="ocean" onclick="window.__setPortfolioTheme('ocean')" aria-label="Deep Ocean dark theme">
         <span class="theme-swatch" style="background: #0A1628; border: 2px solid #2DD4BF;"></span>
         <span class="theme-name">Ocean</span>
       </button>
-      <button type="button" class="theme-btn" data-set-theme="lavender" aria-label="Lavender Studio light theme">
+      <button type="button" class="theme-btn" data-set-theme="lavender" onclick="window.__setPortfolioTheme('lavender')" aria-label="Lavender Studio light theme">
         <span class="theme-swatch" style="background: #FAF8FF; border: 2px solid #7C4DFF;"></span>
         <span class="theme-name">Lavender</span>
       </button>
     </div>
   </aside>
+
+  <script>
+    // Bulletproof Theme Controller (works on both http:// and file:// protocols)
+    window.__setPortfolioTheme = function(theme) {
+      try {
+        var valid = ['default', 'mint', 'ocean', 'lavender'];
+        if (valid.indexOf(theme) === -1) theme = 'default';
+
+        // 1. Set data-theme on <html> element
+        if (theme === 'default') {
+          document.documentElement.removeAttribute('data-theme');
+        } else {
+          document.documentElement.setAttribute('data-theme', theme);
+        }
+
+        // 2. Persist to localStorage safely
+        try {
+          localStorage.setItem('portfolio-theme', theme);
+        } catch(e) {}
+
+        // 3. Update meta theme-color safely
+        try {
+          var themeColors = { default: '#151413', mint: '#F6F1E6', ocean: '#0A1628', lavender: '#FAF8FF' };
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta && themeColors[theme]) meta.setAttribute('content', themeColors[theme]);
+        } catch(e) {}
+
+        // 4. Update active button classes
+        try {
+          var btns = document.querySelectorAll('.theme-btn');
+          for (var i = 0; i < btns.length; i++) {
+            var btn = btns[i];
+            if (btn.getAttribute('data-set-theme') === theme) {
+              btn.classList.add('is-active');
+            } else {
+              btn.classList.remove('is-active');
+            }
+          }
+        } catch(e) {}
+
+        // 5. Update URL query parameter without reload (only on http/https)
+        try {
+          if (window.location.protocol.indexOf('http') === 0) {
+            var url = new URL(window.location.href);
+            if (theme === 'default') {
+              url.searchParams.delete('theme');
+            } else {
+              url.searchParams.set('theme', theme);
+            }
+            window.history.replaceState(null, '', url.toString());
+          }
+        } catch(e) {}
+
+        // 6. Update internal navigation links
+        try {
+          var links = document.querySelectorAll('a[href^="/"], a[href^="./"]');
+          for (var j = 0; j < links.length; j++) {
+            var link = links[j];
+            var href = link.getAttribute('href');
+            if (href && href.indexOf('#') !== 0 && href.indexOf('mailto:') !== 0 && href.indexOf('tel:') !== 0) {
+              var linkUrl = new URL(href, window.location.origin || 'http://localhost:3000');
+              if (theme === 'default') {
+                linkUrl.searchParams.delete('theme');
+              } else {
+                linkUrl.searchParams.set('theme', theme);
+              }
+              link.setAttribute('href', linkUrl.pathname + linkUrl.search + linkUrl.hash);
+            }
+          }
+        } catch(e) {}
+      } catch(err) {
+        console.error('Theme switch error:', err);
+      }
+    };
+
+    // Initialize on load
+    (function initTheme() {
+      try {
+        var t = null;
+        try {
+          var params = new URLSearchParams(window.location.search);
+          t = params.get('theme');
+        } catch(e) {}
+        if (!t) {
+          try { t = localStorage.getItem('portfolio-theme'); } catch(e) {}
+        }
+        window.__setPortfolioTheme(t || 'default');
+      } catch(e) {}
+    })();
+  </script>
 </body>
 </html>
